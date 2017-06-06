@@ -1,0 +1,29 @@
+
+create table livros(
+id integer auto_increment,
+nome varchar(200),
+descricao varchar(500),
+categoria varchar(500),
+autor varchar(500),
+valor float,
+link varchar(200),
+primary key (`id`)
+);
+
+create table vendas(
+id integer auto_increment,
+livro_id int,
+valor float,
+nome_cliente varchar(200),
+email_cliente varchar(200),
+foi_boleto int,
+cartao_nome varchar(200),
+cartao_numero varchar(50),
+cartao_codigo int,
+cartao_data_venc date,
+primary key (`id`)
+);
+
+insert into livros values (null,'livro1','descricao1','categoria1','autor1',50.00,'1');
+insert into livros values (null,'livro2','descricao2','categoria2','autor2',13.00,'2');
+insert into livros values (null,'livro3','descricao3','categoria3','autor3',20.00,'3');
