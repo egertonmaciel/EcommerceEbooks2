@@ -44,9 +44,7 @@
                         autor = x.get(4);
                         valor = x.get(5);
                         link = x.get(6);
-
                 %>
-
                 <tr>
                     <td><%=cod%></td>
                     <td><a href="detalhesEbook.jsp?id=<%=cod%>"><%=nome%></a></td>

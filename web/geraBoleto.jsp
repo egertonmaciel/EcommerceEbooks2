@@ -6,18 +6,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
-
     <head>
         <%@include file="head.jsp" %>
     </head>
     <body>
-      <%@include file="cabecalho.jsp" %>
-
+        <%@include file="cabecalho.jsp" %>
         <%
             String id = request.getParameter("id");
             String nome = request.getParameter("nome");
             String email = request.getParameter("email");
-//            String valor = request.getParameter("valor");
             String cartaoNome = "";
             String cartaoNumero = "";
             String cartaoCodigo = "";
@@ -25,7 +22,7 @@
 
             Double valorLivro = 0.0;
             String link = "";
-            
+
             VendaDAO daoVenda = new VendaDAO();
             Venda venda = new Venda();
             LivroDAO livroDAO = new LivroDAO();
@@ -39,7 +36,7 @@
                 livro.setAutor(x.get(4));
                 livro.setValor(Double.parseDouble(x.get(5)));
                 livro.setLink(x.get(6));
-                
+
                 valorLivro = Double.parseDouble(x.get(5));
                 link = x.get(6);
             }
@@ -74,10 +71,9 @@
         <%
             }
         %>
-
     </center>
 </body>
 </html>
 
-        
-    
+
+
